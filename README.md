@@ -29,3 +29,13 @@ npm start
 ```
 
 Navigate to `http://localhost:3000/#/` in your browser. Allow the browser to use your location.
+
+##TODOS
+
+*TESTING!* Really struggled with getting my unit and e2e tests to function as expected so focussed on completing more of the exercise and then ran out of time coming back to them.
+
+Smoother UI - It's functional but hardly beautiful.
+
+Minify and Gzip app.js
+
+Implement SASS for better stylesheeting and lint them.
