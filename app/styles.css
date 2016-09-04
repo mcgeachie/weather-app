@@ -1,0 +1,85 @@
+body {
+  color: rgb(255, 255, 255);
+  font: 18px/24px Verdana, Geneva, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.weather-widget {
+  background: rgba(28, 42, 132, .8);
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  padding: 5% 0;
+  width: 100vw;
+}
+
+.weather-widget__location {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 30%;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+.weather-widget__city {
+  font-size: 3em;
+  line-height: 1.4em;
+}
+
+.weather-widget__country {
+  font-size: 1.3em;
+  line-height: 1.2em;
+  margin-bottom: 2em;
+}
+
+.weather-container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+}
+
+.data-point {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  margin-left: 30px;
+  padding: 15px 65px 15px 0;
+  position: relative;
+}
+
+.data-point__day {
+  font-size: 1.8em;
+}
+
+.data-point__time {
+  font-size: .6em;
+}
+
+.data-point__temp {
+  font-size: 1.4em;
+  margin-top: 2em;
+}
+
+.data-point__temp-bounds {
+  font-size: .6em;
+  margin-bottom: 2.5em;
+}
+
+.data-point__info {
+  font-size: .6em;
+  margin-top: .6em;
+}
+
+.data-point__icon {
+  height: 70px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 70px;
+}

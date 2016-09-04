@@ -1,0 +1,21 @@
+<div class="weather-widget">
+  <span ng-bind="main.errorMessage"></span>
+  <div class="weather-widget__location">
+    <span class="weather-widget__city" ng-bind="main.weather.city.name"></span>
+    <span class="weather-widget__country" ng-bind="main.weather.city.country"></span>
+    <span ng-show="main.weather.city.coord">lat: {{main.weather.city.coord.lat}}, long: {{main.weather.city.coord.lon}}</span>
+  </div>
+  <div class="weather-container">
+    <span class="data-point" ng-repeat="point in main.weather.list track by $index">
+      <span class="data-point__day">{{point.dt_txt | amDateFormat: 'dddd'}}</span>
+      <span class="data-point__time">{{point.dt_txt | amDateFormat: 'h:mm a'}}</span>
+      <span class="data-point__temp">{{point.main.temp}}°</span>
+      <span class="data-point__temp-bounds">{{point.main.temp_min}}° / {{point.main.temp_max}}°</span>
+      <span class="data-point__info">Humidity: {{point.main.humidity}}%</span>
+      <span class="data-point__info">Clouds: {{point.clouds.all}}%</span>
+      <span class="data-point__info">Wind Speed: {{point.wind.speed}}m/s</span>
+      <span class="data-point__info">Wind Direction: {{point.wind.deg}}°</span>
+      <img class="data-point__icon" ng-src="http://openweathermap.org/img/w/{{point.weather[0].icon}}.png" alt="{{point.weather[0].description}}" />
+    </span>
+  </div>
+</div>
